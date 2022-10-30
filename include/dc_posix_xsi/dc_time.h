@@ -28,13 +28,16 @@ extern "C" {
 #endif
 
 
-struct tm *dc_getdate(const struct dc_env *env, struct dc_error *err, const char *string);
 char *dc_strptime(const struct dc_env *env, struct dc_error *err, const char *restrict buf, const char *restrict format, struct tm *restrict tm);
 
 
 #ifdef __cplusplus
 }
 #endif
+
+
+// Not in FreeBSD
+// struct tm *dc_getdate(const struct dc_env *env, struct dc_error *err, const char *string);
 
 
 #endif // LIBDC_POSIX_XSI_DC_TIME_H
