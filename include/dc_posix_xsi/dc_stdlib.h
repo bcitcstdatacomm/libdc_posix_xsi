@@ -21,6 +21,7 @@
 
 #include <dc_env/env.h>
 #include <stdlib.h>
+#include <stdlib.h>
 
 
 #ifdef __cplusplus
@@ -45,7 +46,6 @@ int dc_putenv(const struct dc_env *env, struct dc_error *err, char *string);
 long dc_random(const struct dc_env *env, struct dc_error *err);
 char *dc_realpath(const struct dc_env *env, struct dc_error *err, const char *restrict file_name, char *restrict resolved_name);
 unsigned short *dc_seed48(const struct dc_env *env, struct dc_error *err, unsigned short seed16v[3]);
-void dc_setkey(const struct dc_env *env, struct dc_error *err, const char *key);
 char *dc_setstate(const struct dc_env *env, struct dc_error *err, char *state);
 void dc_srand48(const struct dc_env *env, struct dc_error *err, long seedval);
 void dc_srandom(const struct dc_env *env, struct dc_error *err, unsigned seed);
@@ -55,6 +55,11 @@ int dc_unlockpt(const struct dc_env *env, struct dc_error *err, int fildes);
 #ifdef __cplusplus
 }
 #endif
+
+
+// Not on FreeBSD
+// void dc_setkey(const struct dc_env *env, struct dc_error *err, const char *key);
+
 
 
 #endif // LIBDC_POSIX_XSI_DC_STDLIB_H

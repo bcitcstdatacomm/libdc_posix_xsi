@@ -76,9 +76,6 @@ add_compile_definitions(_XOPEN_SOURCE=700)
 # Linux
 add_compile_definitions(_DEFAULT_SOURCE)
 
-# FreeBSD
-add_compile_definitions(_SETKEY_DECLARED)
-
 include_directories(${INCLUDE_DIR})
 add_compile_options("-Wall"
         "-Wextra"

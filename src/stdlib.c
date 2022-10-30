@@ -184,13 +184,6 @@ unsigned short *dc_seed48(const struct dc_env *env, struct dc_error *err, unsign
     return ret_val;
 }
 
-void dc_setkey(const struct dc_env *env, struct dc_error *err, const char *key)
-{
-    DC_TRACE(env);
-    errno = 0;
-    setkey(key);
-}
-
 char *dc_setstate(const struct dc_env *env, struct dc_error *err, char *state)
 {
     char *ret_val;
