@@ -1,0 +1,36 @@
+#include "dc_posix_xsi/sys/dc_sem.h"
+
+
+int dc_semctl(const struct dc_env *env, struct dc_error *err, int semid, int semnum, int cmd, ...)
+{
+    int ret_val;
+
+    DC_TRACE(env);
+    errno = 0;
+    // TODO: can I even handle this?
+    ret_val = semctl(semnum, cmd, 0);
+
+    return ret_val;
+}
+
+int dc_semget(const struct dc_env *env, struct dc_error *err, key_t key, int nsems, int semflg)
+{
+    int ret_val;
+
+    DC_TRACE(env);
+    errno = 0;
+    ret_val = semget(key, nsems, semflg);
+
+    return ret_val;
+}
+
+int dc_semop(const struct dc_env *env, struct dc_error *err, int semid, struct sembuf *sops, size_t nsops)
+{
+    int ret_val;
+
+    DC_TRACE(env);
+    errno = 0;
+    ret_val = semop(semid, sops, nsops);
+
+    return ret_val;
+}

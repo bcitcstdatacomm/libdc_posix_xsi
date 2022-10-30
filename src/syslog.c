@@ -1,0 +1,27 @@
+#include "dc_posix_xsi/dc_syslog.h"
+
+
+void dc_closelog(const struct dc_env *env, struct dc_error *err)
+{
+    DC_TRACE(env);
+    errno = 0;
+    closelog();
+}
+
+void dc_openlog(const struct dc_env *env, struct dc_error *err, const char *ident, int logopt, int facility)
+{
+    DC_TRACE(env);
+    errno = 0;
+    openlog(ident, logopt, facility);
+}
+
+int dc_setlogmask(const struct dc_env *env, struct dc_error *err, int maskpri)
+{
+    int ret_val;
+
+    DC_TRACE(env);
+    errno = 0;
+    ret_val = setlogmask(maskpri);
+
+    return ret_val;
+}
