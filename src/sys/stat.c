@@ -11,15 +11,3 @@ int dc_mknod(const struct dc_env *env, struct dc_error *err, const char *path, m
 
     return ret_val;
 }
-
-int dc_mknodat(const struct dc_env *env, struct dc_error *err, int fd, const char *path, mode_t mode, dev_t dev)
-{
-    int ret_val;
-
-    DC_TRACE(env);
-    errno = 0;
-    ret_val = mknodat(fd, path, mode, dev);
-
-    return ret_val;
-}
-

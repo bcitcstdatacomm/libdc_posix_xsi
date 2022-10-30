@@ -29,12 +29,15 @@ extern "C" {
 
 
 int dc_mknod(const struct dc_env *env, struct dc_error *err, const char *path, mode_t mode, dev_t dev);
-int dc_mknodat(const struct dc_env *env, struct dc_error *err, int fd, const char *path, mode_t mode, dev_t dev);
 
 
 #ifdef __cplusplus
 }
 #endif
+
+
+// Not on macOS
+// int dc_mknodat(const struct dc_env *env, struct dc_error *err, int fd, const char *path, mode_t mode, dev_t dev);
 
 
 #endif // LIBDC_POSIX_XSI_DC_STAT_H
