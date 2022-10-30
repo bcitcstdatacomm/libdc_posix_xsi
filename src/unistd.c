@@ -12,13 +12,6 @@ char *dc_crypt(const struct dc_env *env, struct dc_error *err, const char *key, 
     return ret_val;
 }
 
-void dc_encrypt(const struct dc_env *env, struct dc_error *err, char block[64], int edflag)
-{
-    DC_TRACE(env);
-    errno = 0;
-    encrypt(block, edflag);
-}
-
 long dc_gethostid(const struct dc_env *env, struct dc_error *err)
 {
     long ret_val;

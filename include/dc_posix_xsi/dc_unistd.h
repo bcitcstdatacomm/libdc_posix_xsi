@@ -29,7 +29,6 @@ extern "C" {
 
 
 char *dc_crypt(const struct dc_env *env, struct dc_error *err, const char *key, const char *salt);
-void dc_encrypt(const struct dc_env *env, struct dc_error *err, char block[64], int edflag);
 long dc_gethostid(const struct dc_env *env, struct dc_error *err);
 int dc_lockf(const struct dc_env *env, struct dc_error *err, int fildes, int function, off_t size);
 int dc_nice(const struct dc_env *env, struct dc_error *err, int value);
@@ -42,6 +41,10 @@ void dc_sync(const struct dc_env *env, struct dc_error *err);
 #ifdef __cplusplus
 }
 #endif
+
+
+// Not on FreeBSD
+// void dc_encrypt(const struct dc_env *env, struct dc_error *err, char block[64], int edflag);
 
 
 #endif // LIBDC_POSIX_XSI_DC_UNISTD_H
