@@ -1,5 +1,5 @@
-#ifndef LIBDC_POSIX_XSI_DC_TIME_H
-#define LIBDC_POSIX_XSI_DC_TIME_H
+#ifndef LIBDC_POSIX_XSI_SYS_DC_TIME_H
+#define LIBDC_POSIX_XSI_SYS_DC_TIME_H
 
 
 /*
@@ -20,7 +20,7 @@
 
 
 #include <dc_env/env.h>
-#include <sys/types.h>
+#include <sys/time.h>
 
 
 #ifdef __cplusplus
@@ -36,4 +36,4 @@ int dc_utimes(const struct dc_env *env, struct dc_error *err, const char *path, 
 #endif
 
 
-#endif // LIBDC_POSIX_XSI_DC_TIME_H
+#endif // LIBDC_POSIX_XSI_SYS_DC_TIME_H

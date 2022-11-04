@@ -1,5 +1,5 @@
-#ifndef LIBDC_POSIX_XSI_DC_MSG_H
-#define LIBDC_POSIX_XSI_DC_MSG_H
+#ifndef LIBDC_POSIX_XSI_SYS_DC_MSG_H
+#define LIBDC_POSIX_XSI_SYS_DC_MSG_H
 
 
 /*
@@ -39,4 +39,4 @@ int dc_msgsnd(const struct dc_env *env, struct dc_error *err, int msqid, const v
 #endif
 
 
-#endif // LIBDC_POSIX_XSI_DC_MSG_H
+#endif // LIBDC_POSIX_XSI_SYS_DC_MSG_H

@@ -1,5 +1,5 @@
-#ifndef LIBDC_POSIX_XSI_DC_SEM_H
-#define LIBDC_POSIX_XSI_DC_SEM_H
+#ifndef LIBDC_POSIX_XSI_SYS_DC_SEM_H
+#define LIBDC_POSIX_XSI_SYS_DC_SEM_H
 
 
 /*
@@ -38,4 +38,4 @@ int dc_semop(const struct dc_env *env, struct dc_error *err, int semid, struct s
 #endif
 
 
-#endif // LIBDC_POSIX_XSI_DC_SEM_H
+#endif // LIBDC_POSIX_XSI_SYS_DC_SEM_H

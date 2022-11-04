@@ -1,5 +1,5 @@
-#ifndef LIBDC_POSIX_XSI_DC_RESOURCE_H
-#define LIBDC_POSIX_XSI_DC_RESOURCE_H
+#ifndef LIBDC_POSIX_XSI_SYS_DC_RESOURCE_H
+#define LIBDC_POSIX_XSI_SYS_DC_RESOURCE_H
 
 
 /*
@@ -40,4 +40,4 @@ int dc_setrlimit(const struct dc_env *env, struct dc_error *err, int resource, c
 #endif
 
 
-#endif // LIBDC_POSIX_XSI_DC_RESOURCE_H
+#endif // LIBDC_POSIX_XSI_SYS_DC_RESOURCE_H

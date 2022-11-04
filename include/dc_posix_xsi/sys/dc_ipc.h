@@ -1,5 +1,5 @@
-#ifndef LIBDC_POSIX_XSI_DC_IPC_H
-#define LIBDC_POSIX_XSI_DC_IPC_H
+#ifndef LIBDC_POSIX_XSI_SYS_DC_IPC_H
+#define LIBDC_POSIX_XSI_SYS_DC_IPC_H
 
 
 /*
@@ -36,4 +36,4 @@ key_t dc_ftok(const struct dc_env *env, struct dc_error *err, const char *path, 
 #endif
 
 
-#endif // LIBDC_POSIX_XSI_DC_IPC_H
+#endif // LIBDC_POSIX_XSI_SYS_DC_IPC_H

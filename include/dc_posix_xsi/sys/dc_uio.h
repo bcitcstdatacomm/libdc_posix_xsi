@@ -1,5 +1,5 @@
-#ifndef LIBDC_POSIX_XSI_DC_UIO_H
-#define LIBDC_POSIX_XSI_DC_UIO_H
+#ifndef LIBDC_POSIX_XSI_SYS_DC_UIO_H
+#define LIBDC_POSIX_XSI_SYS_DC_UIO_H
 
 
 /*
@@ -37,4 +37,4 @@ ssize_t dc_writev(const struct dc_env *env, struct dc_error *err, int fildes, co
 #endif
 
 
-#endif // LIBDC_POSIX_XSI_DC_UIO_H
+#endif // LIBDC_POSIX_XSI_SYS_DC_UIO_H

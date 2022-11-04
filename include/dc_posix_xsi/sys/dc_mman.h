@@ -1,5 +1,5 @@
-#ifndef LIBDC_POSIX_XSI_DC_MMAN_H
-#define LIBDC_POSIX_XSI_DC_MMAN_H
+#ifndef LIBDC_POSIX_XSI_SYS_DC_MMAN_H
+#define LIBDC_POSIX_XSI_SYS_DC_MMAN_H
 
 
 /*
@@ -35,4 +35,4 @@ int dc_msync(const struct dc_env *env, struct dc_error *err, void *addr, size_t 
 #endif
 
 
-#endif // LIBDC_POSIX_XSI_DC_MMAN_H
+#endif // LIBDC_POSIX_XSI_SYS_DC_MMAN_H

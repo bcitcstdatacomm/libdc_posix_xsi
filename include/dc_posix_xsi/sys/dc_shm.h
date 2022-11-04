@@ -1,5 +1,5 @@
-#ifndef LIBDC_POSIX_XSI_DC_SHM_H
-#define LIBDC_POSIX_XSI_DC_SHM_H
+#ifndef LIBDC_POSIX_XSI_SYS_DC_SHM_H
+#define LIBDC_POSIX_XSI_SYS_DC_SHM_H
 
 
 /*
@@ -39,4 +39,4 @@ int dc_shmget(const struct dc_env *env, struct dc_error *err, key_t key, size_t 
 #endif
 
 
-#endif // LIBDC_POSIX_XSI_DC_SHM_H
+#endif // LIBDC_POSIX_XSI_SYS_DC_SHM_H
