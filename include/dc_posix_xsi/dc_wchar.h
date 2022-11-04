@@ -28,8 +28,8 @@ extern "C" {
 #endif
 
 
-int dc_wcswidth(const struct dc_env *env, struct dc_error *err, const wchar_t *pwcs, size_t n);
-int dc_wcwidth(const struct dc_env *env, struct dc_error *err, wchar_t wc);
+int dc_wcswidth(const struct dc_env *env, const wchar_t *pwcs, size_t n);
+int dc_wcwidth(const struct dc_env *env, wchar_t wc);
 
 
 #ifdef __cplusplus

@@ -9,6 +9,11 @@ int dc_msgctl(const struct dc_env *env, struct dc_error *err, int msqid, int cmd
     errno = 0;
     ret_val = msgctl(msqid, cmd, buf);
 
+    if(ret_val == -1)
+    {
+        DC_ERROR_RAISE_ERRNO(err, errno);
+    }
+
     return ret_val;
 }
 
@@ -19,6 +24,11 @@ int dc_msgget(const struct dc_env *env, struct dc_error *err, key_t key, int msg
     DC_TRACE(env);
     errno = 0;
     ret_val = msgget(key, msgflg);
+
+    if(ret_val == -1)
+    {
+        DC_ERROR_RAISE_ERRNO(err, errno);
+    }
 
     return ret_val;
 }
@@ -31,6 +41,11 @@ ssize_t dc_msgrcv(const struct dc_env *env, struct dc_error *err, int msqid, voi
     errno = 0;
     ret_val = msgrcv(msqid, msgp, msgsz, msgtyp, msgflg);
 
+    if(ret_val == -1)
+    {
+        DC_ERROR_RAISE_ERRNO(err, errno);
+    }
+
     return ret_val;
 }
 
@@ -41,6 +56,11 @@ int dc_msgsnd(const struct dc_env *env, struct dc_error *err, int msqid, const v
     DC_TRACE(env);
     errno = 0;
     ret_val = msgsnd(msqid, msgp, msgsz, msgflg);
+
+    if(ret_val == -1)
+    {
+        DC_ERROR_RAISE_ERRNO(err, errno);
+    }
 
     return ret_val;
 }

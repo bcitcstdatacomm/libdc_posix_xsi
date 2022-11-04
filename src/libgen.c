@@ -1,7 +1,7 @@
 #include "dc_posix_xsi/dc_libgen.h"
 
 
-char *dc_basename(const struct dc_env *env, struct dc_error *err, char *path)
+char *dc_basename(const struct dc_env *env, char *path)
 {
     char *ret_val;
 
@@ -12,7 +12,7 @@ char *dc_basename(const struct dc_env *env, struct dc_error *err, char *path)
     return ret_val;
 }
 
-char *dc_dirname(const struct dc_env *env, struct dc_error *err, char *path)
+char *dc_dirname(const struct dc_env *env, char *path)
 {
     char *ret_val;
 

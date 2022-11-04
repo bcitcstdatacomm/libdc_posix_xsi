@@ -28,12 +28,12 @@ extern "C" {
 #endif
 
 
-void dc_endutxent(const struct dc_env *env, struct dc_error *err);
-struct utmpx *dc_getutxent(const struct dc_env *env, struct dc_error *err);
-struct utmpx *dc_getutxid(const struct dc_env *env, struct dc_error *err, const struct utmpx *id);
-struct utmpx *dc_getutxline(const struct dc_env *env, struct dc_error *err, const struct utmpx *line);
+void dc_endutxent(const struct dc_env *env);
+struct utmpx *dc_getutxent(const struct dc_env *env);
+struct utmpx *dc_getutxid(const struct dc_env *env, const struct utmpx *id);
+struct utmpx *dc_getutxline(const struct dc_env *env, const struct utmpx *line);
 struct utmpx *dc_pututxline(const struct dc_env *env, struct dc_error *err, const struct utmpx *utmpx);
-void dc_setutxent(const struct dc_env *env, struct dc_error *err);
+void dc_setutxent(const struct dc_env *env);
 
 
 #ifdef __cplusplus

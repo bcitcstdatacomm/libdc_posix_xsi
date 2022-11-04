@@ -29,9 +29,9 @@ extern "C" {
 
 
 int dc_dbm_clearerr(const struct dc_env *env, struct dc_error *err, DBM *db);
-void dc_dbm_close(const struct dc_env *env, struct dc_error *err, DBM *db);
+void dc_dbm_close(const struct dc_env *env, DBM *db);
 int dc_dbm_delete(const struct dc_env *env, struct dc_error *err, DBM *db, datum key);
-int dc_dbm_error(const struct dc_env *env, struct dc_error *err, DBM *db);
+int dc_dbm_error(const struct dc_env *env, DBM *db);
 datum dc_dbm_fetch(const struct dc_env *env, struct dc_error *err, DBM *db, datum key);
 datum dc_dbm_firstkey(const struct dc_env *env, struct dc_error *err, DBM *db);
 datum dc_dbm_nextkey(const struct dc_env *env, struct dc_error *err, DBM *db);

@@ -7,15 +7,17 @@ int dc_dbm_clearerr(const struct dc_env *env, struct dc_error *err, DBM *db)
 
     DC_TRACE(env);
     errno = 0;
-
-    // TODO: Linux is broken, returns void not int...?
     dbm_clearerr(db);
-    ret_val = 0;
+
+    if(dc_dbm_error(env, db))
+    {
+        // TODO: what?
+    }
 
     return ret_val;
 }
 
-void dc_dbm_close(const struct dc_env *env, struct dc_error *err, DBM *db)
+void dc_dbm_close(const struct dc_env *env, DBM *db)
 {
     DC_TRACE(env);
     errno = 0;
@@ -30,10 +32,15 @@ int dc_dbm_delete(const struct dc_env *env, struct dc_error *err, DBM *db, datum
     errno = 0;
     ret_val = dbm_delete(db, key);
 
+    if(ret_val < 0)
+    {
+        // TODO: what?
+    }
+
     return ret_val;
 }
 
-int dc_dbm_error(const struct dc_env *env, struct dc_error *err, DBM *db)
+int dc_dbm_error(const struct dc_env *env, DBM *db)
 {
     int ret_val;
 
@@ -52,6 +59,11 @@ datum dc_dbm_fetch(const struct dc_env *env, struct dc_error *err, DBM *db, datu
     errno = 0;
     ret_val = dbm_fetch(db, key);
 
+    if(ret_val.dptr == NULL)
+    {
+        // TODO: what?
+    }
+
     return ret_val;
 }
 
@@ -62,6 +74,11 @@ datum dc_dbm_firstkey(const struct dc_env *env, struct dc_error *err, DBM *db)
     DC_TRACE(env);
     errno = 0;
     ret_val = dbm_firstkey(db);
+
+    if(ret_val.dptr == NULL)
+    {
+        // TODO: what?
+    }
 
     return ret_val;
 }
@@ -74,6 +91,11 @@ datum dc_dbm_nextkey(const struct dc_env *env, struct dc_error *err, DBM *db)
     errno = 0;
     ret_val = dbm_nextkey(db);
 
+    if(ret_val.dptr == NULL)
+    {
+        // TODO: what?
+    }
+
     return ret_val;
 }
 
@@ -85,6 +107,11 @@ DBM *dc_dbm_open(const struct dc_env *env, struct dc_error *err, const char *fil
     errno = 0;
     ret_val = dbm_open(file, open_flags, file_mode);
 
+    if(ret_val  == NULL)
+    {
+        // TODO: what?
+    }
+
     return ret_val;
 }
 
@@ -95,6 +122,11 @@ int dc_dbm_store(const struct dc_env *env, struct dc_error *err, DBM *db, datum 
     DC_TRACE(env);
     errno = 0;
     ret_val = dbm_store(db, key, content, store_mode);
+
+    if(ret_val < 0)
+    {
+        // TODO: what?
+    }
 
     return ret_val;
 }

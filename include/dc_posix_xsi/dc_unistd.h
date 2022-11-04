@@ -29,13 +29,13 @@ extern "C" {
 
 
 char *dc_crypt(const struct dc_env *env, struct dc_error *err, const char *key, const char *salt);
-long dc_gethostid(const struct dc_env *env, struct dc_error *err);
+long dc_gethostid(const struct dc_env *env);
 int dc_lockf(const struct dc_env *env, struct dc_error *err, int fildes, int function, off_t size);
 int dc_nice(const struct dc_env *env, struct dc_error *err, int value);
 int dc_setregid(const struct dc_env *env, struct dc_error *err, gid_t rgid, gid_t egid);
 int dc_setreuid(const struct dc_env *env, struct dc_error *err, uid_t ruid, uid_t euid);
-void dc_swab(const struct dc_env *env, struct dc_error *err, const void *restrict src, void *restrict dest, ssize_t nbytes);
-void dc_sync(const struct dc_env *env, struct dc_error *err);
+void dc_swab(const struct dc_env *env, const void *restrict src, void *restrict dest, ssize_t nbytes);
+void dc_sync(const struct dc_env *env);
 
 
 #ifdef __cplusplus

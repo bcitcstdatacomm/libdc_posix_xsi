@@ -9,5 +9,10 @@ char *dc_strptime(const struct dc_env *env, struct dc_error *err, const char *re
     errno = 0;
     ret_val = strptime(buf, format, tm);
 
+    if(ret_val == NULL)
+    {
+        // TODO: is this an error?
+    }
+
     return ret_val;
 }

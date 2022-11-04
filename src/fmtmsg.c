@@ -9,5 +9,10 @@ int dc_fmtmsg(const struct dc_env *env, struct dc_error *err, long classificatio
     errno = 0;
     ret_val = fmtmsg(classification, label, severity, text, action, tag);
 
+    if(ret_val != MM_OK)
+    {
+        // TODO: what?
+    }
+
     return ret_val;
 }

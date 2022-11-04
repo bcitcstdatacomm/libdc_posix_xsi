@@ -1,7 +1,7 @@
 #include "dc_posix_xsi/dc_string.h"
 
 
-void *dc_memccpy(const struct dc_env *env, struct dc_error *err, void *restrict s1, const void *restrict s2, int c, size_t n)
+void *dc_memccpy(const struct dc_env *env, void *restrict s1, const void *restrict s2, int c, size_t n)
 {
     void *ret_val;
 

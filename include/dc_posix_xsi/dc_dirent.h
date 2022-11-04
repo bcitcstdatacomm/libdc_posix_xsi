@@ -28,8 +28,8 @@ extern "C" {
 #endif
 
 
-void dc_seekdir(const struct dc_env *env, struct dc_error *err, DIR *dirp, long loc);
-long dc_telldir(const struct dc_env *env, struct dc_error *err, DIR *dirp);
+void dc_seekdir(const struct dc_env *env, DIR *dirp, long loc);
+long dc_telldir(const struct dc_env *env, DIR *dirp);
 
 
 #ifdef __cplusplus

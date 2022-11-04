@@ -9,5 +9,10 @@ int dc_mknod(const struct dc_env *env, struct dc_error *err, const char *path, m
     errno = 0;
     ret_val = mknod(path, mode, dev);
 
+    if(ret_val == -1)
+    {
+        DC_ERROR_RAISE_ERRNO(err, errno);
+    }
+
     return ret_val;
 }

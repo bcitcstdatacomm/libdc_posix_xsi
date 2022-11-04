@@ -28,9 +28,9 @@ extern "C" {
 #endif
 
 
-void dc_closelog(const struct dc_env *env, struct dc_error *err);
-void dc_openlog(const struct dc_env *env, struct dc_error *err, const char *ident, int logopt, int facility);
-int dc_setlogmask(const struct dc_env *env, struct dc_error *err, int maskpri);
+void dc_closelog(const struct dc_env *env);
+void dc_openlog(const struct dc_env *env, const char *ident, int logopt, int facility);
+int dc_setlogmask(const struct dc_env *env, int maskpri);
 
 
 #ifdef __cplusplus

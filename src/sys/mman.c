@@ -9,5 +9,10 @@ int dc_msync(const struct dc_env *env, struct dc_error *err, void *addr, size_t 
     errno = 0;
     ret_val = msync(addr, len, flags);
 
+    if(ret_val == -1)
+    {
+        DC_ERROR_RAISE_ERRNO(err, errno);
+    }
+
     return ret_val;
 }

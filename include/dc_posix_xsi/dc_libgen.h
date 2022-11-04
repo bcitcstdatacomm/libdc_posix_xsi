@@ -28,8 +28,8 @@ extern "C" {
 #endif
 
 
-char *dc_basename(const struct dc_env *env, struct dc_error *err, char *path);
-char *dc_dirname(const struct dc_env *env, struct dc_error *err, char *path);
+char *dc_basename(const struct dc_env *env, char *path);
+char *dc_dirname(const struct dc_env *env, char *path);
 
 
 #ifdef __cplusplus

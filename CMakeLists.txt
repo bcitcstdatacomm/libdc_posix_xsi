@@ -206,7 +206,16 @@ set_target_properties(dc_posix_xsi PROPERTIES
 
 find_library(LIBDC_ERROR dc_error REQUIRED)
 find_library(LIBDC_ENV dc_env REQUIRED)
+find_library(LIBGDBM gdbm)
+find_library(LIB_GDBM_COMPAT gdbm_compat)
 
+if(LIBGDBM)
+    target_link_libraries(dc_posix_xsi PUBLIC ${LIBGDBM})
+endif()
+
+if(LIB_GDBM_COMPAT)
+    target_link_libraries(dc_posix_xsi PUBLIC ${LIB_GDBM_COMPAT})
+endif()
 
 target_link_libraries(dc_posix_xsi PUBLIC ${LIBDC_ERROR})
 target_link_libraries(dc_posix_xsi PUBLIC ${LIBDC_ENV})

@@ -29,16 +29,16 @@ extern "C" {
 
 
 int dc_hcreate(const struct dc_env *env, struct dc_error *err, size_t nel);
-void dc_hdestroy(const struct dc_env *env, struct dc_error *err);
+void dc_hdestroy(const struct dc_env *env);
 ENTRY *dc_hsearch(const struct dc_env *env, struct dc_error *err, ENTRY item, ACTION action);
-void dc_insque(const struct dc_env *env, struct dc_error *err, void *element, void *pred);
+void dc_insque(const struct dc_env *env, void *element, void *pred);
 void *dc_lfind(const struct dc_env *env, struct dc_error *err, const void *key, const void *base, size_t *nelp, size_t width, int (*compar)(const void *, const void *));
 void *dc_lsearch(const struct dc_env *env, struct dc_error *err, const void *key, void *base, size_t *nelp, size_t width, int (*compar)(const void *, const void *));
-void dc_remque(const struct dc_env *env, struct dc_error *err, void *element);
-void *dc_tdelete(const struct dc_env *env, struct dc_error *err, const void *restrict key, void **restrict rootp, int(*compar)(const void *, const void *));
-void *dc_tfind(const struct dc_env *env, struct dc_error *err, const void *key, void *const *rootp, int(*compar)(const void *, const void *));
+void dc_remque(const struct dc_env *env, void *element);
+void *dc_tdelete(const struct dc_env *env, const void *restrict key, void **restrict rootp, int(*compar)(const void *, const void *));
+void *dc_tfind(const struct dc_env *env, const void *key, void *const *rootp, int(*compar)(const void *, const void *));
 void *dc_tsearch(const struct dc_env *env, struct dc_error *err, const void *key, void **rootp, int(*compar)(const void *, const void *));
-void dc_twalk(const struct dc_env *env, struct dc_error *err, const void *root, void (*action)(const void *, VISIT, int));
+void dc_twalk(const struct dc_env *env, const void *root, void (*action)(const void *, VISIT, int));
 
 
 #ifdef __cplusplus

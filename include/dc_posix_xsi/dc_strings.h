@@ -28,7 +28,7 @@ extern "C" {
 #endif
 
 
-int dc_ffs(const struct dc_env *env, struct dc_error *err, int i);
+int dc_ffs(const struct dc_env *env, int i);
 
 
 #ifdef __cplusplus

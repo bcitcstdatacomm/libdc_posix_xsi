@@ -1,7 +1,7 @@
 #include "dc_posix_xsi/dc_wchar.h"
 
 
-int dc_wcswidth(const struct dc_env *env, struct dc_error *err, const wchar_t *pwcs, size_t n)
+int dc_wcswidth(const struct dc_env *env, const wchar_t *pwcs, size_t n)
 {
     int ret_val;
 
@@ -12,7 +12,7 @@ int dc_wcswidth(const struct dc_env *env, struct dc_error *err, const wchar_t *p
     return ret_val;
 }
 
-int dc_wcwidth(const struct dc_env *env, struct dc_error *err, wchar_t wc)
+int dc_wcwidth(const struct dc_env *env, wchar_t wc)
 {
     int ret_val;
 
