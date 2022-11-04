@@ -1,4 +1,5 @@
 #include "dc_posix_xsi/sys/dc_stat.h"
+#include <sys/stat.h>
 
 
 int dc_mknod(const struct dc_env *env, struct dc_error *err, const char *path, mode_t mode, dev_t dev)

@@ -1,4 +1,5 @@
 #include "dc_posix_xsi/dc_strings.h"
+#include <strings.h>
 
 
 int dc_ffs(const struct dc_env *env, int i)

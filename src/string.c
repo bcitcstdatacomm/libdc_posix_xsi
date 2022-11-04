@@ -1,4 +1,5 @@
 #include "dc_posix_xsi/dc_string.h"
+#include <string.h>
 
 
 void *dc_memccpy(const struct dc_env *env, void *restrict s1, const void *restrict s2, int c, size_t n)

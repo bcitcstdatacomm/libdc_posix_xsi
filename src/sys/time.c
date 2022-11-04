@@ -1,4 +1,5 @@
 #include "dc_posix_xsi/sys/dc_time.h"
+#include <sys/time.h>
 
 
 int dc_utimes(const struct dc_env *env, struct dc_error *err, const char *path, const struct timeval times[2])

@@ -1,4 +1,5 @@
 #include "dc_posix_xsi/dc_math.h"
+#include <math.h>
 
 
 double dc_j0(const struct dc_env *env, struct dc_error *err, double x)

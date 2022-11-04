@@ -8,7 +8,7 @@ int dc_semctl(const struct dc_env *env, struct dc_error *err, int semid, int sem
     DC_TRACE(env);
     errno = 0;
     // TODO: can I even handle this?
-    ret_val = semctl(semnum, cmd, 0);
+    ret_val = semctl(semid, semnum, cmd, 0);
 
     if(ret_val == -1)
     {

@@ -1,4 +1,5 @@
 #include "dc_posix_xsi/dc_wchar.h"
+#include <wchar.h>
 
 
 int dc_wcswidth(const struct dc_env *env, const wchar_t *pwcs, size_t n)

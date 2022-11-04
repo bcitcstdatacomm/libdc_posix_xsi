@@ -1,4 +1,5 @@
 #include "dc_posix_xsi/dc_syslog.h"
+#include <syslog.h>
 
 
 void dc_closelog(const struct dc_env *env)

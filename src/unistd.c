@@ -1,4 +1,5 @@
 #include "dc_posix_xsi/dc_unistd.h"
+#include <unistd.h>
 
 
 char *dc_crypt(const struct dc_env *env, struct dc_error *err, const char *key, const char *salt)

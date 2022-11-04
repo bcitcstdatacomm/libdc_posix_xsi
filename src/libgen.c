@@ -1,4 +1,5 @@
 #include "dc_posix_xsi/dc_libgen.h"
+#include <libgen.h>
 
 
 char *dc_basename(const struct dc_env *env, char *path)

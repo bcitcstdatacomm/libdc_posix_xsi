@@ -20,8 +20,6 @@
 
 
 #include <dc_env/env.h>
-#include <stdlib.h>
-#include <stdlib.h>
 
 
 #ifdef __cplusplus

@@ -1,4 +1,5 @@
 #include "dc_posix_xsi/dc_grp.h"
+#include <grp.h>
 
 
 void dc_endgrent(const struct dc_env *env, struct dc_error *err)

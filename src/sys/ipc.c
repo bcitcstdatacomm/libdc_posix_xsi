@@ -1,4 +1,5 @@
 #include "dc_posix_xsi/sys/dc_ipc.h"
+#include <sys/ipc.h>
 
 
 key_t dc_ftok(const struct dc_env *env, struct dc_error *err, const char *path, int id)

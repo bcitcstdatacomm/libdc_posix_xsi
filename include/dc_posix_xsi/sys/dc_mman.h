@@ -20,7 +20,6 @@
 
 
 #include <dc_env/env.h>
-#include <sys/mman.h>
 
 
 #ifdef __cplusplus

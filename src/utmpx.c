@@ -1,4 +1,5 @@
 #include "dc_posix_xsi/dc_utmpx.h"
+#include <utmpx.h>
 
 
 void dc_endutxent(const struct dc_env *env)

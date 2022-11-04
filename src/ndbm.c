@@ -12,6 +12,11 @@ int dc_dbm_clearerr(const struct dc_env *env, struct dc_error *err, DBM *db)
     if(dc_dbm_error(env, db))
     {
         // TODO: what?
+        ret_val = -1;
+    }
+    else
+    {
+        ret_val = 0;
     }
 
     return ret_val;

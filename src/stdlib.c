@@ -1,4 +1,5 @@
 #include "dc_posix_xsi/dc_stdlib.h"
+#include <stdlib.h>
 
 
 long dc_a64l(const struct dc_env *env, const char *s)

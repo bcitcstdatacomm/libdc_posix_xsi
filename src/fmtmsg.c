@@ -1,4 +1,5 @@
 #include "dc_posix_xsi/dc_fmtmsg.h"
+#include <fmtmsg.h>
 
 
 int dc_fmtmsg(const struct dc_env *env, struct dc_error *err, long classification, const char *label, int severity, const char *text, const char *action, const char *tag)

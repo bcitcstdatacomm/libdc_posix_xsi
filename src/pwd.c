@@ -1,4 +1,5 @@
 #include "dc_posix_xsi/dc_pwd.h"
+#include <pwd.h>
 
 
 void dc_endpwent(const struct dc_env *env, struct dc_error *err)
