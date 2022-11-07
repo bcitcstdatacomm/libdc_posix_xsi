@@ -110,7 +110,14 @@ DBM *dc_dbm_open(const struct dc_env *env, struct dc_error *err, const char *fil
 
     DC_TRACE(env);
     errno = 0;
-    ret_val = dbm_open(file, open_flags, file_mode);
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdiscarded-qualifiers"
+    ret_val = dbm_open(file, open_flags,
+#ifdef __linux__
+                       (int)
+#endif
+                       file_mode);
+#pragma GCC diagnostic pop
 
     if(ret_val  == NULL)
     {

@@ -9,7 +9,7 @@ void *dc_shmat(const struct dc_env *env, struct dc_error *err, int shmid, const 
     errno = 0;
     ret_val = shmat(shmid, shmaddr, shmflg);
 
-    if(ret_val == (void *)-1)
+    if(ret_val == (void *)-1)       // NOLINT(performance-no-int-to-ptr)
     {
         DC_ERROR_RAISE_ERRNO(err, errno);
     }
