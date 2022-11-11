@@ -15,15 +15,26 @@ target_include_directories(libdc_posix_xsi_test PRIVATE ../include/dc_posix_xsi)
 target_include_directories(libdc_posix_xsi_test PRIVATE /usr/include)
 target_include_directories(libdc_posix_xsi_test PRIVATE /usr/local/include)
 
-find_library(LIBCGREEN cgreen REQUIRED)
 find_library(LIBDC_ERROR dc_error REQUIRED)
 find_library(LIBDC_ENV dc_env REQUIRED)
-find_library(LIBDC_C dc_c REQUIRED)
+find_library(LIBM m)
+find_library(LIBGDBM gdbm)
+find_library(LIB_GDBM_COMPAT gdbm_compat)
 
-target_link_libraries(libdc_posix_xsi_test PRIVATE ${LIBCGREEN})
-target_link_libraries(libdc_posix_xsi_test PRIVATE ${LIBDC_ERROR})
-target_link_libraries(libdc_posix_xsi_test PRIVATE ${LIBDC_ENV})
-target_link_libraries(libdc_posix_xsi_test PRIVATE ${LIBDC_C})
+target_link_libraries(libdc_posix_xsi_test PUBLIC ${LIBDC_ERROR})
+target_link_libraries(libdc_posix_xsi_test PUBLIC ${LIBDC_ENV})
+
+if(LIBM)
+    target_link_libraries(libdc_posix_xsi_test PUBLIC ${LIBM})
+endif()
+
+if(LIBGDBM)
+    target_link_libraries(libdc_posix_xsi_test PUBLIC ${LIBGDBM})
+endif()
+
+if(LIB_GDBM_COMPAT)
+    target_link_libraries(libdc_posix_xsi_test PUBLIC ${LIB_GDBM_COMPAT})
+endif()
 
 add_test(NAME libdc_posix_xsi_test COMMAND libdc_posix_xsi_test)
 
