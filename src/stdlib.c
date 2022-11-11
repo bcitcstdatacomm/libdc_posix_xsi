@@ -13,28 +13,6 @@ long dc_a64l(const struct dc_env *env, const char *s)
     return ret_val;
 }
 
-double dc_drand48(const struct dc_env *env)
-{
-    double ret_val;
-
-    DC_TRACE(env);
-    errno = 0;
-    ret_val = drand48();
-
-    return ret_val;
-}
-
-double dc_erand48(const struct dc_env *env, unsigned short xsubi[3])
-{
-    double ret_val;
-
-    DC_TRACE(env);
-    errno = 0;
-    ret_val = erand48(xsubi);
-
-    return ret_val;
-}
-
 int dc_grantpt(const struct dc_env *env, struct dc_error *err, int fildes)
 {
     int ret_val;
@@ -67,17 +45,6 @@ char *dc_initstate(const struct dc_env *env, struct dc_error *err, unsigned seed
     return ret_val;
 }
 
-long dc_jrand48(const struct dc_env *env, unsigned short xsubi[3])
-{
-    long ret_val;
-
-    DC_TRACE(env);
-    errno = 0;
-    ret_val = jrand48(xsubi);
-
-    return ret_val;
-}
-
 char *dc_l64a(const struct dc_env *env, long value)
 {
     char *ret_val;
@@ -85,46 +52,6 @@ char *dc_l64a(const struct dc_env *env, long value)
     DC_TRACE(env);
     errno = 0;
     ret_val = l64a(value);
-
-    return ret_val;
-}
-
-void dc_lcong48(const struct dc_env *env, unsigned short param[7])
-{
-    DC_TRACE(env);
-    errno = 0;
-    lcong48(param);
-}
-
-long dc_lrand48(const struct dc_env *env)
-{
-    long ret_val;
-
-    DC_TRACE(env);
-    errno = 0;
-    ret_val = lrand48();
-
-    return ret_val;
-}
-
-long dc_mrand48(const struct dc_env *env)
-{
-    long ret_val;
-
-    DC_TRACE(env);
-    errno = 0;
-    ret_val = mrand48();
-
-    return ret_val;
-}
-
-long dc_nrand48(const struct dc_env *env, unsigned short xsubi[3])
-{
-    long ret_val;
-
-    DC_TRACE(env);
-    errno = 0;
-    ret_val = nrand48(xsubi);
 
     return ret_val;
 }
@@ -173,17 +100,6 @@ int dc_putenv(const struct dc_env *env, struct dc_error *err, char *string)
     {
         DC_ERROR_RAISE_ERRNO(err, errno);
     }
-
-    return ret_val;
-}
-
-long dc_random(const struct dc_env *env)
-{
-    long ret_val;
-
-    DC_TRACE(env);
-    errno = 0;
-    ret_val = random();
 
     return ret_val;
 }

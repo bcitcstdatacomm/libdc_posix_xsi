@@ -11,7 +11,7 @@ int dc_dbm_clearerr(const struct dc_env *env, struct dc_error *err, DBM *db)
 
     if(dc_dbm_error(env, db))
     {
-        // TODO: what?
+        // TODO: what? - the spec says it is unspecified!
         ret_val = -1;
     }
     else

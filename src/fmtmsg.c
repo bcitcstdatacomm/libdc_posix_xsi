@@ -12,7 +12,26 @@ int dc_fmtmsg(const struct dc_env *env, struct dc_error *err, long classificatio
 
     if(ret_val != MM_OK)
     {
-        // TODO: what?
+        const char *msg;
+
+        if(ret_val == MM_NOTOK)
+        {
+            msg = "fmtmsg failed";
+        }
+        else if(ret_val == MM_NOMSG)
+        {
+            msg = "fmtmsg unable to generate a message on standard error";
+        }
+        else if(ret_val == MM_NOCON)
+        {
+            msg = "fmtmsg unable to generate a console message";
+        }
+        else
+        {
+            msg = "fmtmsg unknown error";
+        }
+
+        DC_ERROR_RAISE_SYSTEM(err, msg, ret_val);
     }
 
     return ret_val;
