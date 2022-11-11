@@ -21,6 +21,7 @@ find_library(LIBM m)
 find_library(LIBGDBM gdbm)
 find_library(LIB_GDBM_COMPAT gdbm_compat)
 
+target_link_libraries(libdc_posix_xsi_test PUBLIC ${LIBCGREEN})
 target_link_libraries(libdc_posix_xsi_test PUBLIC ${LIBDC_ERROR})
 target_link_libraries(libdc_posix_xsi_test PUBLIC ${LIBDC_ENV})
 
