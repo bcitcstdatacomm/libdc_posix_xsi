@@ -21,6 +21,7 @@
 
 #include <dc_env/env.h>
 #include <ndbm.h>
+#include <sys/stat.h>
 
 
 #ifdef __cplusplus
